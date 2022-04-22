@@ -1,0 +1,8 @@
+python tools/calibrate_camera_livox.py
+
+python tools/rectify.py livox data/data_livox_verify/mono_calib/ data/data_livox_verify/pc_calib/ data/data_livox_verify/rectified_mono/
+
+python tools/reproject.py l515 data/data_l515_verify/mono_calib/ data/data_l515_verify/pc_calib/ data/data_l515_verify/rectified_mono/
+python tools/reproject.py livox data/data_livox_verify/mono_calib/ data/data_livox_verify/pc_calib/ data/data_livox_verify/rectified_mono/
+
+python tools/pyvista_read.py calib_result/rectified_pc/v1.vtp

@@ -1,0 +1,78 @@
+[basic]
+out_f = "./calib_result/camera_livox_transform.json"
+verify_dir = "./calib_result/verify"
+is_stereo = false
+pnp_thr = 0.3
+clip_depth = 1000
+
+[lidar]
+fov = [70.4, 70.4]
+min_angle = [0.1, 0.1]
+
+min_depth = 0.1
+pre_T =  [[0, 0, 1, 0], [0, -1, 0, 0], [1, 0, 0, 0]]
+interp_mode = 'linear'
+interp_fill_value = 0
+
+pc_dir = "./data/data_livox/pc_calib/"
+rectified_pc_dir = "./data/data_livox/rectified_pc/"
+
+[mono]
+mono_dir = "./data/data_livox/mono_calib/"
+rectified_mono_dir = "./data/data_livox/rectified_mono/"
+
+[marker]
+[marker.rgb]
+gray_thresh = 125
+expand_scale = 1.2
+enable_correction = true
+enable_filterby_area = 1
+min_r = 10
+max_r = 30
+
+enable_filterby_gray = 1
+min_gray_thresh = 0
+max_gray_thresh = 150
+
+enable_filterby_circularity = 1
+min_circularity = 0.5
+max_circularity = 1
+
+enable_filterby_convexity = 1
+min_convexity = 0.4
+max_convexity = 1
+
+enable_filterby_inertiaradio = 1
+min_inertiaradio = 0.2
+max_inertiaradio = 1
+
+eps_scale = 9
+min_samples = 3
+
+[marker.lidar]
+gray_thresh = 125
+enable_correction = true
+expand_scale = 1.3
+enable_filterby_area = 1
+min_r = 5
+max_r = 20
+
+enable_filterby_gray = 1
+min_gray_thresh = 0
+max_gray_thresh = 150
+
+enable_filterby_circularity = 1
+min_circularity = 0.1
+max_circularity = 1
+
+enable_filterby_convexity = 1
+min_convexity = 0.1
+max_convexity = 1
+
+enable_filterby_inertiaradio = 1
+min_inertiaradio = 0.1
+max_inertiaradio = 1
+
+eps_scale = 6
+min_samples = 3
+

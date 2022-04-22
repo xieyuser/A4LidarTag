@@ -1,0 +1,12 @@
+opencv
+scikit-image
+scikit-learn
+shapely
+
+# tools
+toml
+easydict
+click
+
+# visulize
+pyvista
